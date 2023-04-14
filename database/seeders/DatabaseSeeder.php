@@ -40,6 +40,7 @@ class DatabaseSeeder extends Seeder
                 $contact->update(['organization_id' => $organizations->random()->id]);
             });
 
-        Product::factory(100)->create();
+        Product::factory(100)
+            ->create(['account_id' => $account->id]);
     }
 }
